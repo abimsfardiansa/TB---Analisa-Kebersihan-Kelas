@@ -1,0 +1,75 @@
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Kebersihan;
+import java.util.Scanner;
+/**
+ *
+ * @author XOC
+ */
+public class Analisis_Kebersihan extends Input_Kebersihan {
+    
+    public Analisis_Kebersihan(){
+        System.out.println("\n\t Analisis Kebersihan Ruang Kelas");
+       // input("Analisis Kebersihan Kelas");
+    }
+    
+    /**
+     *
+     * @return
+     */
+ 
+    public String Sirkulasi (){
+        if (Sirkulasi.equals("lancar")){
+            System.out.println("Sirkulasi Udara Sesuai");
+        }
+        else{ System.out.println("Sirkulasi Udara Tidak Sesuai");
+        
+    }
+        return Sirkulasi;
+        
+    }
+    
+    public int NilaiCahaya (){
+        if (NilaiCahaya>=250 && NilaiCahaya<=350){
+            System.out.println("Pencahayaan Sesuai");}
+        else{
+            System.out.println("Pencahayaan Tidak Sesuai");
+        }
+        return NilaiCahaya;
+    }
+    
+    
+public int Kelembaban (){
+    if (Kelembaban>=70 && Kelembaban>=80){
+        System.out.println("Kelembaban Sesuai");
+    }
+    else{
+            System.out.println("Kelembaban Tidak Sesuai");
+        }
+    return Kelembaban;
+}
+public int suhu (){
+    if (suhu>=25 && suhu<=35){
+        System.out.println("Suhu Sesuai ");
+        
+    }
+    else{
+            System.out.println("Suhu Tidak Sesuai");
+        }
+    return suhu;
+}
+
+    @Override
+    
+    public void input(){
+        
+        System.out.println("Sirkulasi Udara =");
+        System.out.println("Nilai Pencahayaan =");
+        System.out.println("Kelembaban =");
+        System.out.println("Suhu =");
+
+}
+}  

@@ -1,0 +1,26 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Kebersihan;
+
+
+
+/**
+ *
+ * @author XOC
+ */
+abstract class Input_Kebersihan {
+    String Sirkulasi;
+    int NilaiCahaya;
+    int Kelembaban;
+    int suhu;
+   
+    
+    
+    public void input(){
+    
+    }
+}
+    
+

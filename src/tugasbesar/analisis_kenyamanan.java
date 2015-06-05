@@ -8,71 +8,61 @@ import java.util.Scanner;
 
 /**
  *
- * @author AHO
+ * @author XOC
  */
 public class analisis_kenyamanan extends kenyamanan_kelas{
+        Scanner a=new Scanner(System.in);
+    public analisis_kenyamanan(String bising, String bau, String bocor, String rusak, String aus){
+        super(bising,bau,bocor,rusak,aus);
+    }
     
+
+    @Override
+    public void masuk(){
+        System.out.println("Analisis Kenyamanan Kelas");
+        System.out.print("Kebisingan  = ");
+        setBising(a.next());
+        System.out.print("Bau ruangan = ");
+        setBau(a.next());
+        System.out.print("Kebocoran = ");
+        setBocor(a.next());
+        System.out.print("Kerusakan = ");
+        setRusak(a.next());
+        System.out.print("Keausan   = ");
+        setAus(a.next());
+    }
     
-    Scanner a=new Scanner(System.in);
     
     @Override
-   // String analisisBising(){
-    void bisingg(){
-        super.bisingg();
+    public void analisisnyaman(){
         if(getBising().equals("tidak.bising")){
             System.out.println("\tHening, sesuai.");
         }
         else{
             System.out.println("\tBising, tidak sesuai.");
         }
-       // return bising;
-    }
-    
-    @Override
-   // String analisisBau(){
-    void bauk(){
-        super.bauk();
-        if(getBau().equals("tidak.bau")){
+        
+         if(getBau().equals("tidak.bau")){
             System.out.println("\tHarum, sesuai.");
         }
         else{
             System.out.println("\tBau, tidak sesuai.");
         }
-      //  return bau;
-    }
-    
-    @Override
-    //String analisisbocor(){
-    void kebocoran(){
-        super.kebocoran();
+         
         if(getBocor().equals("tidak.bocor")){
             System.out.println("\tTidak bocor, sesuai.");
         }
         else{
             System.out.println("\tBocor, tidak sesuai.");
         }
-      //  return bocor;
-    }
-    
-    
-    
-    @Override
- //   String analisisrusak(){
-    void kerusakan(){
-        super.kerusakan();
+        
         if(getRusak().equals("tidak.rusak")){
             System.out.println("\tUtuh, sesuai.");
         }
         else{
             System.out.println("\tRusak, tidak sesuai.");
         }
-     //   return rusak;
-    }
-    
-    @Override
- //   String analisisaus(){
-    void keausan(){
-    super.keausan();
+        
         if(getAus().equals("tidak.aus")){
             System.out.println("\tUtuh, sesuai.");
             
@@ -83,6 +73,15 @@ public class analisis_kenyamanan extends kenyamanan_kelas{
             
             System.out.println("------------------------------------------------");
         }
-   //     return aus;
     }
+       
+        @Override
+        public void njobo(){
+            System.out.println("Kebisingan = "+getBising());
+            System.out.println("Bau ruangan = "+getBau());
+            System.out.println("Kebocoran = "+getBocor());
+            System.out.println("Kerusakan = "+getRusak());
+            System.out.println("Keausan = "+getAus());
+        }
 }
+

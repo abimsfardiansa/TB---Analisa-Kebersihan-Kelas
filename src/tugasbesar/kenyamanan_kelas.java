@@ -1,36 +1,84 @@
+
+import java.util.Scanner;
+
+
+//import java.util.Scanner;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-import java.util.Scanner;
+
 /**
  *
- * @author Danang
+ * @author AHO
  */
-public class inp_R_kelas {
-    String kebisingan;
-    String bau;
-    String kebocoran;
-    String kerusakan;
-    String keausan;
+public abstract class kenyamanan_kelas {
+ 
     
-    Scanner rkls = new Scanner(System.in);
+    private String bising;
+    private String bau;
+    private String bocor;
+    private String rusak;
+    private String aus;
+
+    public kenyamanan_kelas(String bising, String bau, String bocor, String rusak, String aus) {
+        this.bising = bising;
+        this.bau = bau;
+        this.bocor = bocor;
+        this.rusak = rusak;
+        this.aus = aus;
+    }
     
-    public void inpt (String rkelas){
-        System.out.println("Kebisingan Ruangan Bising/Tidak Bising  = ");
-        kebisingan=rkls.next();
-        System.out.println("Kondisi Bau Ruangan Bau/Tidak Bau       = ");
-        bau=rkls.next();
-        System.out.println("Kebocoran Ruangan Bocor/Tidak Bocor     = ");
-        kebocoran=rkls.next();
-        System.out.println("Kerusakan Ruangan Rusak/Tidak Rusak     = ");
-        kerusakan=rkls.next();
-        System.out.println("Keausan Ruangan Aus/Tidak               = ");
+    
+    
+    
+    public String getBising() {
+        return bising;
     }
-    String bising (){
-    return kebisingan;
-}
-    String ruang_kelas(){
-        return null;
+
+    public void setBising(String bising) {
+        this.bising = bising;
     }
+
+    public String getBau() {
+        return bau;
+    }
+
+    public void setBau(String bau) {
+        this.bau = bau;
+    }
+
+    public String getBocor() {
+        return bocor;
+    }
+
+    public void setBocor(String bocor) {
+        this.bocor = bocor;
+    }
+
+    public String getRusak() {
+        return rusak;
+    }
+
+    public void setRusak(String rusak) {
+        this.rusak = rusak;
+    }
+
+    public String getAus() {
+        return aus;
+    }
+
+    public void setAus(String aus) {
+        this.aus = aus;
+    }
+    
+
+    Scanner z=new Scanner(System.in);
+    
+    
+    
+   public abstract void masuk();
+   public abstract void analisisnyaman();
+   public abstract void njobo();
 }

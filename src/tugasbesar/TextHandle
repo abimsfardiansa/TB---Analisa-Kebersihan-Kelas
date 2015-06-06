@@ -1,0 +1,55 @@
+
+
+
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+
+public class TextHandle {
+    private String path;
+    private boolean appendFile = false;
+    
+    public TextHandle (String path, boolean appendFile){
+        this.path = path;
+        this.appendFile = appendFile;
+    }
+    
+    public void writeFile(String text) throws IOException{
+        FileWriter write = new FileWriter(path, appendFile);
+        try (PrintWriter printLine = new PrintWriter(write)) {
+            printLine.printf("%s"+"%n", text);
+        }
+    }
+    
+    public String[] openFile() throws FileNotFoundException, IOException{
+        FileReader fr = new FileReader(path);
+        String[] textData;
+        try (BufferedReader textReader = new BufferedReader(fr)) {
+            int numberOfLines = numberLines();
+            textData = new String[numberOfLines];
+            int i;
+            for (i=0; i<numberOfLines; i++){
+                textData[i]=textReader.readLine();
+            }
+        }
+        return textData;
+    }
+    
+    public int numberLines() throws FileNotFoundException, IOException{
+        FileReader fileToRead = new FileReader(path);
+        int numberOfLines;
+        try (BufferedReader bf = new BufferedReader(fileToRead)) {
+            String aLine;
+            numberOfLines = 0;
+            while((aLine = bf.readLine()) != null){
+                numberOfLines++;
+            }
+        }
+        return numberOfLines;
+    }
+}

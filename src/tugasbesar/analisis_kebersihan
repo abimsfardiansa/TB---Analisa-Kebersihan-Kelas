@@ -1,0 +1,59 @@
+
+import java.io.IOException;
+import java.util.Scanner;
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author XOC
+ */
+
+public class analisis_kebersihan extends kebersihan_Kelas{
+    Scanner er=new Scanner(System.in);
+    public analisis_kebersihan(String sirkulasi, int cahaya, int kelembaban, int suhu){
+        super(sirkulasi, cahaya, kelembaban, suhu);
+    }
+    analisiskebersihan k=new analisiskebersihan();
+    @Override
+       public void mlebu(){
+        try{
+            super.bersih();
+            System.out.println(k.analisissirkulasi(sirkulasi));
+            System.out.println(k.analisiscahaya(cahaya));
+            System.out.println(k.analisislembab(kelembaban));
+            System.out.println(k.analisissuhu(suhu));
+            
+            String path = "D:/kebersihan.txt";
+            boolean append = true;//jika append = false file lama dihapus, jika true melanjutkan file yang ada
+ 
+            TextHandle file = new TextHandle(path,append); 
+               
+               
+//            System.out.print("Masukan Kata :");
+            file.writeFile(sirkulasi+" : "+k.analisissirkulasi(sirkulasi));
+            file.writeFile(cahaya+" : "+k.analisiscahaya(cahaya));
+            file.writeFile(kelembaban+" : "+k.analisislembab(kelembaban));
+            file.writeFile(suhu+" : "+k.analisissuhu(suhu));
+           // file.writeFile(bisingg);
+           
+          /*  System.out.println("Hasil Input Ruang :");
+            
+            String [] aryLines = file.openFile();
+            int i;
+            for ( i=0; i < aryLines.length; i++ ) {
+                System.out.println( aryLines[ i ] ) ;
+            }*/
+        } catch (Exception ex) {
+            ex.printStackTrace();
+           // Logger.getLogger(Input_IdentitasRK.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+        }
+    }
+    
+ 
+  
+

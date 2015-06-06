@@ -9,10 +9,7 @@ import java.util.Scanner;
  * and open the template in the editor.
  */
 
-/**
- *
- * @author AHO
- */
+
 public abstract class kenyamanan_kelas {
  
     

@@ -1,0 +1,43 @@
+
+import java.util.Scanner;
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author XOC
+ */
+abstract public class lingkungan_Kelas {
+    String lantai;
+    String dinding;
+    String atap;
+    String pintu;
+    String jendela;
+    
+    Scanner ling=new Scanner(System.in);
+
+    public lingkungan_Kelas(String lantai, String dinding, String atap, String pintu, String jendela) {
+        this.lantai = lantai;
+        this.dinding = dinding;
+        this.atap = atap;
+        this.pintu = pintu;
+        this.jendela = jendela;
+    }
+    public void lingk(){
+        System.out.print("Kondisi lantai  = ");
+        lantai=ling.next();
+        System.out.print("Kondisi dinding = ");
+        dinding=ling.next();
+        System.out.print("Kondisi atap    = ");
+        atap=ling.next();
+        System.out.print("Kondisi pintu   = ");
+        pintu=ling.next();
+        System.out.print("Kondisi jendela = ");
+        jendela=ling.next();
+    }
+    public abstract void inputling();
+    
+}

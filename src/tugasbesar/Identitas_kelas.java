@@ -1,5 +1,10 @@
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /*
  * To change this template, choose Tools | Templates
@@ -16,6 +21,15 @@ public class Identitas_kelas {
     private String lokasi;
     private String jurusan;
     private String fakultas;
+
+    public Identitas_kelas(String namaruang, String lokasi, String jurusan, String fakultas) {
+        this.namaruang = namaruang;
+        this.lokasi = lokasi;
+        this.jurusan = jurusan;
+        this.fakultas = fakultas;
+    }
+    
+   
     
     public String getNamaruang() {
         return namaruang;
@@ -51,7 +65,8 @@ public class Identitas_kelas {
     
       
     Scanner a=new Scanner(System.in);
-    public void identitas(){
+    void identitas(){
+        try {
         System.out.println("\n\t\tINVENTARIS KELAS");
         System.out.print("\nNama ruang   = ");
         setNamaruang(a.next());
@@ -63,5 +78,17 @@ public class Identitas_kelas {
         setFakultas(a.next());
         System.out.println("------------------------------------------------");
         System.out.println(getFakultas()+" "+getJurusan()+"\t"+getLokasi()+" "+getNamaruang());
+        
+        
+        String path = "D:/identitas.txt";
+            boolean append = true;//jika append = false file lama dihapus, jika true melanjutkan file yang ada
+ 
+            TextHandle file = new TextHandle(path,append);  file.writeFile(getNamaruang());
+            file.writeFile(getLokasi());
+            file.writeFile(getJurusan());
+            file.writeFile(getFakultas());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }    
     }
 }

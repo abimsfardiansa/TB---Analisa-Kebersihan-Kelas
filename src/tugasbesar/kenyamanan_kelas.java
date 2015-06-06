@@ -16,12 +16,20 @@ import java.util.Scanner;
 public abstract class kenyamanan_kelas {
  
     
-    private String bising;
+    /*private String bising;
     private String bau;
     private String bocor;
     private String rusak;
-    private String aus;
-
+    private String aus;*/
+    
+    String bising;
+    String bau;
+    String bocor;
+    String rusak;
+    String aus;
+    
+    
+    
     public kenyamanan_kelas(String bising, String bau, String bocor, String rusak, String aus) {
         this.bising = bising;
         this.bau = bau;
@@ -29,56 +37,25 @@ public abstract class kenyamanan_kelas {
         this.rusak = rusak;
         this.aus = aus;
     }
-    
-    
-    
-    
-    public String getBising() {
-        return bising;
-    }
-
-    public void setBising(String bising) {
-        this.bising = bising;
-    }
-
-    public String getBau() {
-        return bau;
-    }
-
-    public void setBau(String bau) {
-        this.bau = bau;
-    }
-
-    public String getBocor() {
-        return bocor;
-    }
-
-    public void setBocor(String bocor) {
-        this.bocor = bocor;
-    }
-
-    public String getRusak() {
-        return rusak;
-    }
-
-    public void setRusak(String rusak) {
-        this.rusak = rusak;
-    }
-
-    public String getAus() {
-        return aus;
-    }
-
-    public void setAus(String aus) {
-        this.aus = aus;
-    }
-    
-
     Scanner z=new Scanner(System.in);
-    
-    
+    public void saya(){
+        System.out.println("Analisis Kenyamanan Kelas");
+        System.out.print("Kebisingan  = ");
+       // setBising(a.nextLine());
+        bising=z.next();
+        System.out.print("Bau ruangan = ");
+        //setBau(a.nextLine());
+        bau=z.next();
+        System.out.print("Kebocoran = ");
+        //setBocor(a.nextLine());
+        bocor=z.next();
+        System.out.print("Kerusakan = ");
+        //setRusak(a.nextLine());
+        rusak=z.next();
+        System.out.print("Keausan   = ");
+        //setAus(a.nextLine());
+        aus=z.next();
+    }
     
    public abstract void masuk();
-   public abstract void analisisnyaman();
-   public abstract void njobo();
 }

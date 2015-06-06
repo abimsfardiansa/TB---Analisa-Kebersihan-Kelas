@@ -1,0 +1,63 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author XOC
+ */
+public class analisislingkungan {
+    String analantai(String lantai){
+        if(lantai.equals("bersih")){
+            return "\tKondisi lantai sesuai.";
+        }
+        else{
+            return "\tKondisi lantai tidak sesuai.";
+        }
+    }
+        
+        String anadinding(String dinding){
+        if(dinding.equals("bersih")){
+            return "\tKondisi dinding sesuai.";
+        }
+        else{
+            return "\tKondisi dinding tidak sesuai.";
+        }
+    }
+        String anaatap(String atap){
+        if(atap.equals("bersih")){
+            return "\tKondisi atap sesuai.";
+        }
+        else{
+            return "\tKondisi atap tidak sesuai.";
+        }
+    }
+        String anapintu(String pintu){
+        if(pintu.equals("bersih")){
+            return "\tKondisi pintu sesuai.";
+        }
+        else{
+            return "\tKondisi pintu tidak sesuai.";
+        }    
+    }
+        String anajendela(String jendela){
+        if(jendela.equals("bersih")){
+            return "\tKondisi jendela sesuai.";
+        }
+        else{
+            return "\tKondisi jendela tidak sesuai.";
+        }    
+    }
+        String anasemua(String lantai, String atap,String dinding, String pintu,String jendela){
+        if(lantai.equals("bersih")&& dinding.equals("bersih")&& atap.equals("bersih")&& pintu.equals("bersih")&& jendela.equals("bersih")){
+            return "\tKeseluruhan kondisi SESUAI.\n------------------------------------------------";
+
+           // return true;
+        }
+        else{
+            return "\tKeseleruhan kondisi TIDAK SESUAI.\n------------------------------------------------";
+          //  return false;
+        }    
+    }
+}

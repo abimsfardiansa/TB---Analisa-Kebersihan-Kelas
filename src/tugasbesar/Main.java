@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-/**
+/**sdf
  *
  * @author AHO
  */
@@ -14,71 +14,55 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Identitas_kelas id=new Identitas_kelas();                
-        id.identitas();
+        Identitas_kelas id=new Identitas_kelas(null, null, null, null);
+      //  id.identitas();
         
-        analisis_kondisi1 kond=new analisis_kondisi1();
+       /* analisis_kondisi1 kond=new analisis_kondisi1(100, 900, 100, 200, 10, 20);
         kond.Luas();
         kond.rasioluas();
         kond.jmlpintu();
         kond.jmljendela();
         
-        Analisa_Steker a=new Analisa_Steker();
+        Analisa_saranaprasarana a=new Analisa_saranaprasarana(1, null, null, 2, null, null, 3, null, null, 4, null, null, 5, null, null, 6, null, null, null, 7, null);
         a.AnalisaJumlahSteker();
         a.AnalisaKondisiSteker();
         a.AnalisaPosisiSteker();
         
-        Analisa_Lcd b=new Analisa_Lcd();                
-        b.AnalisaJumlahLcd();
-        b.AnalisaKondisiLcd();
-        b.AnalisaPosisiLcd();
+        a.AnalisaJumlahLcd();
+        a.AnalisaKondisiLcd();
+        a.AnalisaPosisiLcd();
         
-        Analisa_Lampu c=new Analisa_Lampu();
-        c.AnalisaJumlahLampu();
-        c.AnalisaKondisiLampu();
-        c.AnalisaPosisiLampu();
+        a.AnalisaJumlahLampu();
+        a.AnalisaKondisiLampu();
+        a.AnalisaPosisiLampu();
         
-        Analisis_Kipas d=new Analisis_Kipas();
-        d.AnalisaJumlahKipas();
-        d.AnalisaKondisiKipas();
-        d.AnalisaPosisiKipas();
+        a.AnalisaJumlahKipas();
+        a.AnalisaKondisiKipas();
+        a.AnalisaPosisiKipas();
         
-        Analisis_AC e=new Analisis_AC();
-        e.AnalisaJumlahac();
-        e.AnalisaKondisiac();
-        e.AnalisaPosisiac();
+        a.AnalisaJumlahac();
+        a.AnalisaKondisiac();
+        a.AnalisaPosisiac();
         
-        analisis_lingkungan lk=new analisis_lingkungan();
-        lk.analisis_lantai();
-        lk.analisis_dinding();
-        lk.analisis_atap();
-        lk.analisis_pintu();
-        lk.analisis_jendela();
-        lk.analisis_semua();
+        a.pilihssid();
+        a.AnalisaLogin();
         
-        analisis_kebersihan ber=new analisis_kebersihan();
-        ber.analisisSirkulasi();
-        ber.analisisPencahayaan();
-        ber.analisisKelembaban();
-        ber.analisisSuhu();
+        a.AnalisaJumlahcctv();
+        a.AnalisaKondisicctv();
+        a.AnalisaPosisicctv1();
+        a.AnalisaPosisicctv2();*/
         
-        analisis_kenyamanan gh=new analisis_kenyamanan();
-     /*   gh.analisisBising();
-        gh.analisisBau();
-        gh.analisisbocor();
-        gh.analisisrusak();
-        gh.analisisaus();*/
+        analisis_lingkungan lk=new analisis_lingkungan(null,null,null,null,null);
+        //lk.inputling();
         
-        gh.bisingg();
-        gh.bauk();
-        gh.kebocoran();
-        gh.kerusakan();
-        gh.keausan();
+       analisis_kebersihan ber=new analisis_kebersihan(null,12,11,1);
+        ber.mlebu();
+        
+        
+       analisis_kenyamanan ny=new analisis_kenyamanan(null, null, null, null, null);
+       ny.masuk();
 
-        analisis_keamanan qw=new analisis_keamanan();
-        qw.kekokohan();
-        qw.kuncipintu();
-        qw.kuncijendela();
-        qw.bahaya();
+        analisis_keamanan qw=new analisis_keamanan(null, null, null, null);
+        qw.aman();
     }
 }
